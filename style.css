@@ -156,8 +156,14 @@ img {
 }
 
 /* Logo Styling */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Space between logo and text */
+}
+
 .logo {
-    height: 64px;
+    height: 90px; /* INCREASED HEIGHT */
     width: auto;
     /* Removed drop shadow, logo now stands out naturally on white background */
     transition: transform 0.3s ease;
@@ -166,6 +172,22 @@ img {
 .logo:hover {
     transform: scale(1.05);
 }
+
+.header-text {
+    font-family: 'Merriweather', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.2;
+    display: none; /* Hide by default on mobile */
+}
+
+@media (min-width: 640px) {
+    .header-text {
+        display: block;
+    }
+}
+
 
 /* Desktop Nav */
 .desktop-nav {
